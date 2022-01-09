@@ -1,7 +1,7 @@
 import random, string, urllib.request, json
 
 #root password
-password = '12345678'
+password = '4882265qaz'
 
 #Setup sshd
 ! apt-get install -qq -o=Dpkg::Use-Pty=0 openssh-server pwgen > /dev/null
@@ -21,8 +21,8 @@ password = '12345678'
 #Run sshd
 get_ipython().system_raw('/usr/sbin/sshd -D &')
 
-!wget https://raw.githubusercontent.com/117503445/colab_ssh_frp/master/frpc.ini
-!wget https://raw.githubusercontent.com/117503445/colab_ssh_frp/master/frpc
+!wget https://raw.githubusercontent.com/miven/colab_ssh_frp/master/frpc.ini
+!wget https://raw.githubusercontent.com/miven/colab_ssh_frp/master/frpc
 !chmod +x frpc
 
 !./frpc
